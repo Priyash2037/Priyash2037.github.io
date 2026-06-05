@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ── Meta & SEO ─────────────────────────────────────── -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Priyash Rode — Electronics & Telecommunication Engineering student, Software Developer, and Full-Stack Builder based in Pune, India." />
+  <meta name="keywords"
+    content="Priyash Rode, portfolio, software developer, full stack, electronics engineering, Django, Python, Pune" />
+  <meta name="author" content="Priyash Rode" />
+  <meta property="og:title" content="Priyash Rode — Portfolio" />
+  <meta property="og:description"
+    content="Personal portfolio of Priyash Rode — Electronics & Telecom Engineer and Software Developer." />
+  <meta property="og:type" content="website" />
+
+  <title>Priyash Rode — Software Developer & Engineer</title>
+
+  <!-- ── Font ──────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+  <!-- ── Styles ────────────────────────────────────────── -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════
+       CUSTOM CURSOR ELEMENTS
+       (position: fixed, driven by script.js)
+  ════════════════════════════════════════════════════ -->
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════════════ -->
+  <header id="navbar" role="banner">
+    <a href="#hero" class="nav-logo" aria-label="Priyash Rode — Home">
+      PR<span>.</span>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li><a href="#about"      id="nav-about">About</a></li>
+        <li><a href="#projects"   id="nav-projects">Projects</a></li>
+        <li><a href="#experience" id="nav-experience">Experience</a></li>
+        <li><a href="#skills"     id="nav-skills">Skills</a></li>
+        <li><a href="#contact"    id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button
+      id="hamburger-btn"
+      class="hamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero introduction">
+    <!-- Animated background grid -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <!-- Ambient glow orbs -->
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Status badge -->
+      <div class="hero-badge" aria-live="polite">
+        Open to opportunities
+      </div>
+
+      <!-- Name -->
+      <h1 class="hero-name">
+        Priyash<br />
+        <span class="accent-word">Rode</span>
+      </h1>
+
+      <!-- Typed rotating headline -->
+      <p class="hero-headline">
+        <span id="typed-headline"
+              aria-live="polite"
+              aria-label="Electronics & Telecom Engineer. Software Developer.">
+        </span><span class="typed-cursor" aria-hidden="true">|</span>
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero-cta">
+        <a href="#projects"
+           id="cta-view-work"
+           class="btn btn-primary btn-magnetic"
+           aria-label="View my projects">
+          View My Work
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#contact"
+           id="cta-contact"
+           class="btn btn-secondary btn-magnetic"
+           aria-label="Contact me">
+          Contact Me
+        </a>
+        <!-- Download Resume button — place your PDF as "resume.pdf" in this folder -->
+        <a href="resume.pdf"
+           id="cta-resume"
+           class="btn btn-download btn-magnetic"
+           download="Priyash_Rode_Resume.pdf"
+           aria-label="Download my resume">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 2v8M5 7l3 3 3-3M2 12v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1"
+                  stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════════════════ -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-inner">
+
+        <!-- Avatar -->
+        <div class="about-avatar-wrap reveal">
+          <div class="avatar-initials" aria-label="Initials avatar: PR">PR</div>
+          <div class="avatar-ring" aria-hidden="true"></div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text reveal" data-delay="100">
+          <span class="section-label">Who I Am</span>
+          <h2 class="section-title" id="about-title">
+            Driven by curiosity,<br/>defined by code.
+          </h2>
+          <p>
+            Organized and dependable Electronics and Telecommunication Engineering
+            student with hands-on technical internship experience in full-stack
+            development and data science applications.
+          </p>
+          <p>
+            Proven track record of managing multiple project priorities with a
+            proactive attitude, rigorous version control discipline, and a
+            collaborative mindset. Adept at breaking down complex requirements to
+            build clean, functional software systems and eager to apply analytical
+            and developer skills to real-world engineering challenges.
+          </p>
+
+          <!-- Quick stats -->
+          <div class="about-stats" aria-label="Quick stats">
+            <div class="stat-item">
+              <span class="stat-num">3+</span>
+              <span class="stat-lbl">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">2</span>
+              <span class="stat-lbl">Internships</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">6.8</span>
+              <span class="stat-lbl">CGPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       PROJECTS SECTION
+  ════════════════════════════════════════════════════ -->
+  <section id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">What I've Built</span>
+        <h2 class="section-title" id="projects-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          A selection of projects that reflect my technical range — from
+          embedded systems to web applications.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Rural Healthcare -->
+        <article class="project-card reveal spotlight-card" data-delay="0"
+                 aria-label="Rural Healthcare Telemedicine Application">
+          <span class="card-tag">Healthcare · AI</span>
+          <span class="project-icon" aria-hidden="true">🏥</span>
+          <h3>Rural Healthcare Telemedicine Application</h3>
+          <p>
+            A digital health ecosystem designed to address critical staff shortages
+            in rural areas. Features offline digital patient records, AI-driven
+            symptom checkers, and seamless teleconsultation infrastructure.
+          </p>
+          <div class="tech-stack" aria-label="Technologies used">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Django</span>
+            <span class="tech-badge">AI / ML</span>
+            <span class="tech-badge">SQLite</span>
+            <span class="tech-badge">Offline-First</span>
+          </div>
+        </article>
+
+        <!-- Project 2: Adaptive Headlight -->
+        <article class="project-card reveal spotlight-card" data-delay="120"
+                 aria-label="AI-Powered Adaptive Headlight System">
+          <span class="card-tag">Embedded · Computer Vision</span>
+          <span class="project-icon" aria-hidden="true">🚗</span>
+          <h3>AI-Powered Adaptive Headlight System</h3>
+          <p>
+            A hardware-integrated automotive safety system utilizing computer vision
+            on a Raspberry Pi to recognize real-time traffic and automatically
+            alternate between city and highway headlight modes.
+          </p>
+          <div class="tech-stack" aria-label="Technologies used">
+            <span class="tech-badge">Raspberry Pi</span>
+            <span class="tech-badge">OpenCV</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Object Detection</span>
+            <span class="tech-badge">Embedded Systems</span>
+          </div>
+        </article>
+
+        <!-- Project 3: F1 Web App -->
+        <article class="project-card reveal spotlight-card" data-delay="240"
+                 aria-label="F1 Championship Web App">
+          <span class="card-tag">Web · Data Analysis</span>
+          <span class="project-icon" aria-hidden="true">🏎️</span>
+          <h3>F1 Championship Web App</h3>
+          <p>
+            A motorsport data analysis tool with live stream integration,
+            championship probability calculators, and real-time standings dashboards
+            for Formula 1 enthusiasts.
+          </p>
+          <div class="tech-stack" aria-label="Technologies used">
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Pandas</span>
+            <span class="tech-badge">Data Viz</span>
+            <span class="tech-badge">REST API</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       EXPERIENCE SECTION (Timeline)
+  ════════════════════════════════════════════════════ -->
+  <section id="experience" aria-labelledby="experience-title">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Career Path</span>
+        <h2 class="section-title" id="experience-title">Work Experience</h2>
+        <p class="section-subtitle">
+          Hands-on roles that sharpened my ability to ship real products under
+          professional conditions.
+        </p>
+      </div>
+
+      <div class="timeline" role="list" aria-label="Work experience timeline">
+
+        <!-- Role 1 -->
+        <div class="timeline-item reveal" data-delay="0" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-period">01/2026 – 02/2026</span>
+            </div>
+            <h3>Full Stack Development Intern</h3>
+            <p class="timeline-org">Elevance Skills</p>
+            <p>
+              Built responsive, accessible UIs and robust web applications
+              leveraging HTML, CSS, JavaScript, Python, and Django. Managed core
+              database configurations, conducted code reviews, and maintained
+              structured version control using Git to ensure clean release history.
+            </p>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="timeline-item reveal" data-delay="150" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-period">11/2024 – 12/2024</span>
+            </div>
+            <h3>Virtual Volunteer Intern</h3>
+            <p class="timeline-org">Imaginos Foundation</p>
+            <p>
+              Supported community outreach frameworks in a fully virtual environment,
+              demonstrating structured time management, proactive milestone tracking,
+              and cross-functional collaboration with remote teams.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       EDUCATION SECTION
+  ════════════════════════════════════════════════════ -->
+  <section id="education" aria-labelledby="education-title">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Academic Background</span>
+        <h2 class="section-title" id="education-title">Education</h2>
+        <p class="section-subtitle">
+          A strong academic foundation in electronics engineering, supplemented
+          by industry-relevant certifications.
+        </p>
+      </div>
+
+      <div class="education-grid">
+
+        <!-- Degree -->
+        <div class="edu-card reveal" data-delay="0">
+          <div class="edu-icon" aria-hidden="true">🎓</div>
+          <h3>B.Tech — Electronics & Telecommunication Engineering</h3>
+          <p class="edu-org">AISSMS IOIT, Pune</p>
+          <p>
+            Graduation: May 2028<br />
+            First Year CGPA: <strong>6.8</strong>
+          </p>
+        </div>
+
+        <!-- Certification -->
+        <div class="edu-card reveal" data-delay="120">
+          <div class="edu-icon" aria-hidden="true">📊</div>
+          <h3>Data Science Certification</h3>
+          <p class="edu-org">CODL (Virtual)</p>
+          <p>
+            August 2025 – Present<br />
+            Covering data analysis, machine learning fundamentals, and statistical
+            modelling with Python.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SKILLS SECTION
+  ════════════════════════════════════════════════════ -->
+  <section id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Tech Stack</span>
+        <h2 class="section-title" id="skills-title">Skills & Tools</h2>
+        <p class="section-subtitle">
+          A curated toolkit built through projects, internships, and continuous
+          self-directed learning.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Languages -->
+        <div class="skill-group reveal" data-delay="0">
+          <p class="skill-group-title">Languages</p>
+          <div class="skill-badges" aria-label="Programming languages">
+            <span class="skill-badge">🐍 Python</span>
+            <span class="skill-badge">⚙️ C++</span>
+            <span class="skill-badge">🌐 HTML</span>
+            <span class="skill-badge">🎨 CSS</span>
+            <span class="skill-badge">✨ JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Frameworks & Tools -->
+        <div class="skill-group reveal" data-delay="100">
+          <p class="skill-group-title">Frameworks & Tools</p>
+          <div class="skill-badges" aria-label="Frameworks and tools">
+            <span class="skill-badge">🦄 Django</span>
+            <span class="skill-badge">🔀 Git</span>
+            <span class="skill-badge">📱 Flutter</span>
+          </div>
+        </div>
+
+        <!-- Data Analysis -->
+        <div class="skill-group reveal" data-delay="200">
+          <p class="skill-group-title">Data Analysis</p>
+          <div class="skill-badges" aria-label="Data analysis tools">
+            <span class="skill-badge">🐼 Pandas</span>
+            <span class="skill-badge">🔢 NumPy</span>
+            <span class="skill-badge">📊 Excel</span>
+          </div>
+        </div>
+
+        <!-- Core Knowledge -->
+        <div class="skill-group reveal" data-delay="300">
+          <p class="skill-group-title">Core Knowledge</p>
+          <div class="skill-badges" aria-label="Core knowledge areas">
+            <span class="skill-badge">🏗️ Full-Stack Web</span>
+            <span class="skill-badge">🗄️ Relational DBs</span>
+            <span class="skill-badge">🍓 Raspberry Pi</span>
+            <span class="skill-badge">⚡ ESP32</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       CONTACT SECTION
+  ════════════════════════════════════════════════════ -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact-inner">
+
+        <!-- Left: info -->
+        <div class="contact-info reveal">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title" id="contact-title">
+            Let's build<br /><span>something great.</span>
+          </h2>
+          <p>
+            I'm actively looking for internship and full-time opportunities. Whether
+            you have a project in mind, want to collaborate, or just want to say hi —
+            my inbox is always open.
+          </p>
+
+          <div class="contact-links">
+            <!-- Email -->
+            <div class="contact-link-item">
+              <div class="contact-link-icon" aria-hidden="true">✉️</div>
+              <div class="contact-link-text">
+                <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Email</div>
+                <a href="mailto:priyashrode@gmail.com" id="email-link">
+                  priyashrode@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-link-item">
+              <div class="contact-link-icon" aria-hidden="true">📞</div>
+              <div class="contact-link-text">
+                <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Phone</div>
+                <a href="tel:+918484807992" id="phone-link">+91 8484807992</a>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-link-item">
+              <div class="contact-link-icon" aria-hidden="true">📍</div>
+              <div class="contact-link-text">
+                <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Location</div>
+                <span style="color:var(--text-primary);">Pune, Maharashtra, India 411014</span>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-link-item">
+              <div class="contact-link-icon" aria-hidden="true">🐙</div>
+              <div class="contact-link-text">
+                <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">GitHub</div>
+                <a href="https://github.com/Priyash2037"
+                   id="github-link"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  github.com/Priyash2037
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: quick-info card -->
+        <div class="contact-card reveal" data-delay="150">
+          <h3>Quick Info</h3>
+
+          <div class="availability">
+            <span class="availability-dot" aria-hidden="true"></span>
+            Available for opportunities
+          </div>
+
+          <div class="info-row">
+            <span>Role</span>
+            <span>Software Developer</span>
+          </div>
+          <div class="info-row">
+            <span>Status</span>
+            <span>Student (3rd Year)</span>
+          </div>
+          <div class="info-row">
+            <span>Graduation</span>
+            <span>May 2028</span>
+          </div>
+          <div class="info-row">
+            <span>Location</span>
+            <span>Pune, India</span>
+          </div>
+          <div class="info-row">
+            <span>Preferred Role</span>
+            <span>Full-Stack / Backend</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER BAR
+  ════════════════════════════════════════════════════ -->
+  <footer class="footer-bar" role="contentinfo">
+    <p>© 2026 <span>Priyash Rode</span>. Crafted with ❤️ &amp; vanilla JS.</p>
+
+    <nav class="footer-socials" aria-label="Social links">
+      <a href="https://github.com/Priyash2037"
+         target="_blank"
+         rel="noopener noreferrer"
+         id="footer-github"
+         aria-label="GitHub profile">
+        <!-- GitHub SVG icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57
+            0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695
+            -.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99
+            .105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225
+            -.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405
+            c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225
+            0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3
+            0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+
+      <a href="mailto:priyashrode@gmail.com"
+         id="footer-email"
+         aria-label="Send email">
+        <!-- Email SVG icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m2 7 10 7 10-7"/>
+        </svg>
+      </a>
+    </nav>
+  </footer>
+
+  <!-- ─── JavaScript ─────────────────────────────────────── -->
+  <script src="script.js"></script>
+
+  <!-- Typed cursor blink style (inline — tiny) -->
+  <style>
+    .typed-cursor {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 300;
+      animation: blink 1s step-end infinite;
+      margin-left: 2px;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+  </style>
+
+</body>
+</html>
